@@ -1,0 +1,194 @@
+#  A L L   P I N G E R S'   I N D E X
+#
+# Updated: Mon, 27 Feb 2017
+# This list was last updated by Steve Crook
+# Please email corrections/issues to: steve@mixmin.net
+
+[austria]
+base        = https://www.tahina.priv.at/~cm/stats/
+rlist       = https://www.tahina.priv.at/~cm/stats/rlist.txt
+mlist       = https://www.tahina.priv.at/~cm/stats/mlist.txt
+rlist2      = https://www.tahina.priv.at/~cm/stats/rlist2.txt
+mlist2      = https://www.tahina.priv.at/~cm/stats/mlist2.txt
+rlist_html  = https://www.tahina.priv.at/~cm/stats/rlist.html
+mlist_html  = https://www.tahina.priv.at/~cm/stats/mlist.html
+rlist2_html = https://www.tahina.priv.at/~cm/stats/rlist2.html
+mlist2_html = https://www.tahina.priv.at/~cm/stats/mlist2.html
+pgpring     = https://www.tahina.priv.at/~cm/stats/pgp-all.asc
+pgpring_rsa = https://www.tahina.priv.at/~cm/stats/pgp-rsa.asc
+mixring     = https://www.tahina.priv.at/~cm/stats/pubring.mix
+type2list   = https://www.tahina.priv.at/~cm/stats/type2.list
+
+[brabus]
+base        = http://brabus.remailer.org.uk/echolot/
+rlist       = http://brabus.remailer.org.uk/echolot/rlist.txt
+mlist       = http://brabus.remailer.org.uk/echolot/mlist.txt
+rlist2      = http://brabus.remailer.org.uk/echolot/rlist2.txt
+mlist2      = http://brabus.remailer.org.uk/echolot/mlist2.txt
+rlist_html  = http://brabus.remailer.org.uk/echolot/rlist.html
+mlist_html  = http://brabus.remailer.org.uk/echolot/mlist.html
+rlist2_html = http://brabus.remailer.org.uk/echolot/rlist2.html
+mlist2_html = http://brabus.remailer.org.uk/echolot/mlist2.html
+pgpring     = http://brabus.remailer.org.uk/echolot/pgp-all.asc
+pgpring_rsa = http://brabus.remailer.org.uk/echolot/pgp-rsa.asc
+mixring     = http://brabus.remailer.org.uk/echolot/pubring.mix
+type2list   = http://brabus.remailer.org.uk/echolot/type2.list
+
+[deuxpi]
+base        = http://www.deuxpi.ca/echolot/
+rlist       = http://www.deuxpi.ca/echolot/rlist.txt
+mlist       = http://www.deuxpi.ca/echolot/mlist.txt
+rlist2      = http://www.deuxpi.ca/echolot/rlist2.txt
+mlist2      = http://www.deuxpi.ca/echolot/mlist2.txt
+rlist_html  = http://www.deuxpi.ca/echolot/rlist.html
+mlist_html  = http://www.deuxpi.ca/echolot/mlist.html
+rlist2_html = http://www.deuxpi.ca/echolot/rlist2.html
+mlist2_html = http://www.deuxpi.ca/echolot/mlist2.html
+pgpring     = http://www.deuxpi.ca/echolot/pgp-all.asc
+pgpring_rsa = http://www.deuxpi.ca/echolot/pgp-rsa.asc
+mixring     = http://www.deuxpi.ca/echolot/pubring.mix
+type2list   = http://www.deuxpi.ca/echolot/type2.list
+
+[frell]
+base        = http://echolot.theremailer.net/
+rlist       = http://echolot.theremailer.net/rlist.txt
+mlist       = http://echolot.theremailer.net/mlist.txt
+rlist2      = http://echolot.theremailer.net/rlist2.txt
+mlist2      = http://echolot.theremailer.net/mlist2.txt
+rlist_html  = http://echolot.theremailer.net/rlist.html
+mlist_html  = http://echolot.theremailer.net/mlist.html
+rlist2_html = http://echolot.theremailer.net/rlist2.html
+mlist2_html = http://echolot.theremailer.net/mlist2.html
+pgpring     = http://echolot.theremailer.net/pgp-all.asc
+pgpring_rsa = http://echolot.theremailer.net/pgp-rsa.asc
+mixring     = http://echolot.theremailer.net/pubring.mix
+type2list   = http://echolot.theremailer.net/type2.list
+
+[hermetix]
+base        = http://www.hermetix.org/echolot/
+rlist       = http://www.hermetix.org/echolot/rlist.txt
+mlist       = http://www.hermetix.org/echolot/mlist.txt
+rlist2      = http://www.hermetix.org/echolot/rlist2.txt
+mlist2      = http://www.hermetix.org/echolot/mlist2.txt
+rlist_html  = http://www.hermetix.org/echolot/rlist.html
+mlist_html  = http://www.hermetix.org/echolot/mlist.html
+rlist2_html = http://www.hermetix.org/echolot/rlist2.html
+mlist2_html = http://www.hermetix.org/echolot/mlist2.html
+pgpring     = http://www.hermetix.org/echolot/pgp-all.asc
+pgpring_rsa = http://www.hermetix.org/echolot/pgp-rsa.asc
+mixring     = http://www.hermetix.org/echolot/pubring.mix
+type2list   = http://www.hermetix.org/echolot/type2.list
+
+[holland]
+base        = http://holland.remailer.nl/echolot/
+rlist       = http://holland.remailer.nl/echolot/rlist.txt
+mlist       = http://holland.remailer.nl/echolot/mlist.txt
+rlist2      = http://holland.remailer.nl/echolot/rlist2.txt
+mlist2      = http://holland.remailer.nl/echolot/mlist2.txt
+rlist_html  = http://holland.remailer.nl/echolot/rlist.html
+mlist_html  = http://holland.remailer.nl/echolot/mlist.html
+rlist2_html = http://holland.remailer.nl/echolot/rlist2.html
+mlist2_html = http://holland.remailer.nl/echolot/mlist2.html
+pgpring     = http://holland.remailer.nl/echolot/pgp-all.asc
+pgpring_rsa = http://holland.remailer.nl/echolot/pgp-rsa.asc
+mixring     = http://holland.remailer.nl/echolot/pubring.mix
+type2list   = http://holland.remailer.nl/echolot/type2.list
+
+[kroken]
+base        = http://rlist.uni-boeblingen.de/
+rlist       = http://rlist.uni-boeblingen.de/rlist.txt
+mlist       = http://rlist.uni-boeblingen.de/mlist.txt
+rlist2      = http://rlist.uni-boeblingen.de/rlist2.txt
+mlist2      = http://rlist.uni-boeblingen.de/mlist2.txt
+rlist_html  = http://rlist.uni-boeblingen.de/rlist.html
+mlist_html  = http://rlist.uni-boeblingen.de/mlist.html
+rlist2_html = http://rlist.uni-boeblingen.de/rlist2.html
+mlist2_html = http://rlist.uni-boeblingen.de/mlist2.html
+pgpring     = http://rlist.uni-boeblingen.de/pgp-all.asc
+pgpring_rsa = http://rlist.uni-boeblingen.de/pgp-rsa.asc
+mixring     = http://rlist.uni-boeblingen.de/pubring.mix
+type2list   = http://rlist.uni-boeblingen.de/type2.list
+
+[mixmin]
+base        = https://www.mixmin.net/echolot/
+rlist       = https://www.mixmin.net/echolot/rlist.txt
+mlist       = https://www.mixmin.net/echolot/mlist.txt
+rlist2      = https://www.mixmin.net/echolot/rlist2.txt
+mlist2      = https://www.mixmin.net/echolot/mlist2.txt
+rlist_html  = https://www.mixmin.net/echolot/rlist.html
+mlist_html  = https://www.mixmin.net/echolot/mlist.html
+rlist2_html = https://www.mixmin.net/echolot/rlist2.html
+mlist2_html = https://www.mixmin.net/echolot/mlist2.html
+pgpring     = https://www.mixmin.net/echolot/pgp-all.asc
+pgpring_rsa = https://www.mixmin.net/echolot/pgp-rsa.asc
+mixring     = https://www.mixmin.net/echolot/pubring.mix
+type2list   = https://www.mixmin.net/echolot/type2.list
+
+[mixmin4096]
+base        = https://www.mixmin.net/echolot/
+rlist       = https://www.mixmin.net/echolot/rlist.txt
+mlist       = https://www.mixmin.net/echolot/mlist.txt
+rlist2      = https://www.mixmin.net/echolot/rlist2.txt
+mlist2      = https://www.mixmin.net/echolot/mlist2.txt
+rlist_html  = https://www.mixmin.net/echolot/rlist.html
+mlist_html  = https://www.mixmin.net/echolot/mlist.html
+rlist2_html = https://www.mixmin.net/echolot/rlist2.html
+mlist2_html = https://www.mixmin.net/echolot/mlist2.html
+pgpring     = https://www.mixmin.net/echolot/pgp-all.asc
+pgpring_rsa = https://www.mixmin.net/echolot/pgp-rsa.asc
+mixring     = https://www.mixmin.net/echolot/pubring.mix
+type2list   = https://www.mixmin.net/echolot/type2.list
+
+[noreply]
+base        = http://www.noreply.org/echolot/
+rlist       = http://www.noreply.org/echolot/rlist.txt
+mlist       = http://www.noreply.org/echolot/mlist.txt
+rlist2      = http://www.noreply.org/echolot/rlist2.txt
+mlist2      = http://www.noreply.org/echolot/mlist2.txt
+rlist_html  = http://www.noreply.org/echolot/rlist.html
+mlist_html  = http://www.noreply.org/echolot/mlist.html
+rlist2_html = http://www.noreply.org/echolot/rlist2.html
+mlist2_html = http://www.noreply.org/echolot/mlist2.html
+pgpring     = http://www.noreply.org/echolot/pgp-all.asc
+pgpring_rsa = http://www.noreply.org/echolot/pgp-rsa.asc
+mixring     = http://www.noreply.org/echolot/pubring.mix
+type2list   = http://www.noreply.org/echolot/type2.list
+
+[paranoia]
+base        = https://remailer.paranoici.org/echolot.html
+rlist       = https://remailer.paranoici.org/rlist.txt
+mlist       = https://remailer.paranoici.org/mlist.txt
+rlist2      = https://remailer.paranoici.org/rlist2.txt
+mlist2      = https://remailer.paranoici.org/mlist2.txt
+rlist_html  = https://remailer.paranoici.org/rlist.html
+mlist_html  = https://remailer.paranoici.org/mlist.html
+rlist2_html = https://remailer.paranoici.org/rlist2.html
+mlist2_html = https://remailer.paranoici.org/mlist2.html
+pgpring     = https://remailer.paranoici.org/pgp-all.asc
+pgpring_rsa = https://remailer.paranoici.org/pgp-rsa.asc
+mixring     = https://remailer.paranoici.org/pubring.mix
+type2list   = https://remailer.paranoici.org/type2.list
+
+[sec3]
+base        = https://sec3.net/echolot/
+rlist       = https://sec3.net/echolot/rlist.txt
+mlist       = https://sec3.net/echolot/mlist.txt
+rlist2      = https://sec3.net/echolot/rlist2.txt
+mlist2      = https://sec3.net/echolot/mlist2.txt
+rlist_html  = https://sec3.net/echolot/rlist.html
+mlist_html  = https://sec3.net/echolot/mlist.html
+rlist2_html = https://sec3.net/echolot/rlist2.html
+mlist2_html = https://sec3.net/echolot/mlist2.html
+pgpring     = https://sec3.net/echolot/pgp-all.asc
+pgpring_rsa = https://sec3.net/echolot/pgp-rsa.asc
+mixring     = https://sec3.net/echolot/pubring.mix
+type2list   = https://sec3.net/echolot/type2.list
+
+[senshi]
+base        = http://senshiweb.webhop.net/
+rlist2      = http://senshiweb.webhop.net/rlist2.txt
+mlist2      = http://senshiweb.webhop.net/mlist2.txt
+rlist_html  = http://senshiweb.webhop.net/rlist.html
+mlist_html  = http://senshiweb.webhop.net/mlist.html
+mixring     = http://senshiweb.webhop.net/pubring.mix
+type2list   = http://senshiweb.webhop.net/type2.lis

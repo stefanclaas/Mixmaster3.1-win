@@ -1,0 +1,1647 @@
+
+<!-- saved from url=(0045)http://mixmaster.sourceforge.net/manpage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body>Content-type: text/html
+
+
+<title>Man page of MIXMASTER</title>
+
+<h1>MIXMASTER</h1>
+Section: User Commands  (1)<br>Updated: Mixmaster Version 3.0 beta<br><a href="http://mixmaster.sourceforge.net/manpage.html#index">Index</a>
+<a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html">Return to Main Contents</a><hr>
+
+
+<a name="lbAB">&nbsp;</a>
+<h2>NAME</h2>
+
+mixmaster - anonymous remailer software
+<a name="lbAC">&nbsp;</a>
+<h2>SYNOPSIS</h2>
+
+<b>mixmaster</b>
+
+[<b>-hpmdSvT</b>]
+[<b>-t </b><i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=user@host" target="_blank">user@host</a></i>]
+[<b>-g </b><i>newsgroup</i>]
+[<b>-s </b><i>subject</i>]
+[<b>-a </b><i>filename</i>]
+[<b>-l </b><i>mix1,mix2,mix3,...</i>]
+[<b>-c </b><i>num</i>]
+[<i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=user@host" target="_blank">user@host</a></i>]
+[<i>filename</i>]
+<p>
+
+<b>mixmaster</b>
+
+[<b>-f</b>[<b>rfg</b>] <i>filename</i>]
+</p><p>
+
+<b>mixmaster </b>[<b>-RGKSP</b>]
+
+<a name="lbAD">&nbsp;</a>
+</p><h2>DESCRIPTION</h2>
+
+Mixmaster is an anonymous remailer. Remailers provide protection
+against traffic analysis and allow sending mail anonymously or
+pseudonymously.
+<p>
+
+In the non-interactive mode, Mixmaster reads a message from its
+standard input or from a file.  Destination address and input file can
+be specified in the command line.  If no address is given in the
+command line, the input file is expected to contain a message complete
+with mail headers.
+<a name="lbAE">&nbsp;</a>
+</p><h2>OPTIONS</h2>
+
+<dl compact="">
+<dt><b>-h, --help</b>
+
+</dt><dd>
+Print a summary of command line options.
+</dd><dt><b>-V, --version</b>
+
+</dt><dd>
+Print version information.
+</dd><dt><b>--about</b>
+
+</dt><dd>
+Print authorship and copyright information.
+</dd><dt><b>--config=</b><i>filename</i>
+
+</dt><dd>
+Read configuration from an alternate file.
+</dd><dt><b>-t, --to=</b><i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=user@host" target="_blank">user@host</a></i>
+
+</dt><dd>
+Add the destination address(es) to the message header. The input file
+contains the message body without headers.
+</dd><dt><b>-g, --post-to=</b><i>newsgroup</i>
+
+</dt><dd>
+Add the newsgroup(s) to the message header. The input file
+contains the message body without headers.
+</dd><dt><b>-p, --post</b>
+
+</dt><dd>
+Post the message to Usenet.
+</dd><dt><b>-m, --mail</b>
+
+</dt><dd>
+Send the message as electronic mail. (This is the default.)
+</dd><dt><b>-s, --subject=</b><i>subject</i>
+
+</dt><dd>
+Add the
+<i>subject</i>
+
+to the message header.
+</dd><dt><b>--header=</b><i>'Header: text'</i>
+
+</dt><dd>
+Add the header line to the message header.
+</dd><dt><b>-a, --attachment=</b><i>filename</i>
+
+</dt><dd>
+Attach
+<i>file</i>
+
+to the message.
+</dd><dt><b>--encrypt</b>
+
+</dt><dd>
+Encrypt the message using the OpenPGP format.
+</dd><dt><b>--sign</b>
+
+</dt><dd>
+Sign the message using the OpenPGP format.
+</dd><dt><b>-l, --chain=</b><i>mix1,mix2,mix3,...</i>
+
+</dt><dd>
+Use this remailer chain to send the message. Alternatively, the input
+message may contain a pseudo-header
+<b>Chain:</b>.
+
+If no chain is specified, Mixmaster will use a chain of four random
+remailers.
+</dd><dt><b>-T, --type-list</b>
+
+</dt><dd>
+Display the contents of the
+<b>type2.list</b>
+
+file.
+</dd><dt><b>-c, --copies=</b><i>num</i>
+
+</dt><dd>
+Send
+<i>num</i>
+
+copies of the message to increase reliability.
+</dd><dt><b>-d, --dummy</b>
+
+</dt><dd>
+Generate a dummy message as protection against traffic analysis.
+</dd><dt><b>-S, --send</b>
+
+</dt><dd>
+Send the message(s) from the pool.
+</dd><dt><b>-v, --verbose</b>
+
+</dt><dd>
+Output informational messages.
+</dd><dt><b>-f</b> [<i>file</i>]
+
+</dt><dd>
+Read a mail folder or news article. This function requires ncurses support.
+</dd><dt><b>-fr</b> [<i>file</i>]
+
+</dt><dd>
+Reply to a message.
+</dd><dt><b>-ff</b> [<i>file</i>]
+
+</dt><dd>
+Post a follow-up to a message.
+</dd><dt><b>-fg</b> [<i>file</i>]
+
+</dt><dd>
+Send a group reply to a message.
+</dd><dt><b>--update-pinger-list</b>
+
+</dt><dd>
+Download an updated all pingers list file.
+</dd><dt><b>--update-stats</b><i>[=source</i>]
+
+</dt><dd>
+Download updated stats.
+</dd></dl>
+<a name="lbAF">&nbsp;</a>
+<h3>Remailer options:</h3>
+
+<dl compact="">
+<dt><b>--config=</b><i>filename</i>
+
+</dt><dd>
+Read configuration from an alternate file.
+</dd><dt><b>-R, --read-mail</b>
+
+</dt><dd>
+Read a remailer message from standard input and store it in the pool.
+</dd><dt><b>-I, --store-mail</b>
+
+</dt><dd>
+Read a remailer message from standard input and store it in the pool
+without decrypting it immediately. It will be processed the next time
+Mixmaster processes the queue (called with -M or in daemon mode).
+</dd><dt><b>-P, --pop-mail</b>
+
+</dt><dd>
+Read mail from the POP3 servers listed in
+<b>pop3.cfg</b>.
+
+</dd><dt><b>-M, --remailer</b>
+
+</dt><dd>
+Check if it is time to perform the regular remailer actions:
+Send messages from the pool, get mail from POP3 servers and keep the
+internal files up-to-date.
+</dd><dt><b>-D, --daemon</b>
+
+</dt><dd>
+Detach from the console and process the pool, get mail and update the
+internal files at regular intervals.
+</dd><dt><b>--no-detach</b>
+
+</dt><dd>
+Run as daemon but do not detach from the terminal (This option is
+only useful together with <b>--daemon</b>).
+</dd><dt><b>-G, --generate-key</b>
+
+</dt><dd>
+Generate a new remailer key.
+</dd><dt><b>-K, --update-keys</b>
+
+</dt><dd>
+Generate remailer keys if necessary.
+</dd><dt><b>-S, --send</b>
+
+</dt><dd>
+Force sending the message(s) from the pool.
+</dd><dt><b>--install-svc</b>
+
+</dt><dd>
+Install the Mixmaster Service on Win32.
+</dd><dt><b>--remove-svc</b>
+
+</dt><dd>
+Remove the Mixmaster Service on Win32.
+</dd><dt><b>--run-svc</b>
+
+</dt><dd>
+Run the Mixmaster Service on Win32.
+</dd><dt><b>--redirect</b>
+
+</dt><dd>
+Read a Mixmaster packet from stdin and route it through a chain given with
+<b>--no-ask-passphrase</b>
+
+Do not ask for the remailer passphrase even if we don't have it compiled in,
+don't have it in the config file, don't have it in the environment and we are
+on a tty.
+<b>--chain</b>.
+Note that this may corrupt the packet if there is not enough space in the
+headers (that is, if there are more than 20 hops total).  This function is
+not normally needed but may come in handy in certain cases.
+</dd></dl>
+<a name="lbAG">&nbsp;</a>
+<h2>CONFIGURATION</h2>
+
+Mixmaster reads its configuration from the file
+<b>mix.cfg</b>
+
+in its working directory.  The configuration file consists of lines of
+the type
+<p>
+
+<i>VARIABLE       values</i>
+
+</p><p>
+
+and of comments, which begin with a
+<b>#</b>
+
+character.  The variables have reasonable default values, but it is
+useful to create a configuration file using the
+<b>Install</b>
+
+script when setting up a remailer.
+</p><p>
+
+All configuration variables can be overridden from the command line,
+e.g.
+<b>mixmaster -S --POOLSIZE=0 --RATE=100</b>
+
+will send all messages currently in the message pool.
+<a name="lbAH">&nbsp;</a>
+</p><h3>Client configuration:</h3>
+
+<dl compact="">
+<dt><b>ADDRESS</b>
+
+</dt><dd>
+Your address for sending non-anonymous messages.
+</dd><dt><b>NAME</b>
+
+</dt><dd>
+Your real name (used for sending non-anonymous messages).
+</dd><dt><b>MAILtoNEWS</b>
+
+</dt><dd>
+Address of a mail-to-news gateway. Default:
+<b><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=mail2news@nym.alias.net" target="_blank">mail2news@nym.alias.net</a></b>.
+
+</dd><dt><b>CHAIN</b>
+
+</dt><dd>
+Default chain for anonymous messages to be sent.
+<b>CHAIN</b>
+
+is a comma-separated list of remailer names or addresses.
+A
+<b>*</b>
+
+represents a random reliable remailer. Default:
+<b>*,*,*,*</b>.
+
+</dd><dt><b>NUMCOPIES</b>
+
+</dt><dd>
+Number of redundant copies of an anonymous message to be
+sent, unless specified otherwise on the command line.
+Default:
+<b>1</b>.
+
+</dd><dt><b>DISTANCE</b>
+
+</dt><dd>
+When selecting random remailers, the chain will contain
+<i>DISTANCE</i>
+
+other remailers between two occurrences of the
+same remailer in the chain. Default:
+<b>2</b>.
+
+</dd><dt><b>MINREL</b>
+
+</dt><dd>
+Only select remailers with a reliability of at least
+<i>MINREL</i>%.
+
+Default:
+<b>98</b>.
+
+</dd><dt><b>RELFINAL</b>
+
+</dt><dd>
+Only select a remailer with a reliability of at least
+<i>RELFINAL</i>%
+
+as the final remailer. Default:
+<b>99</b>.
+
+</dd><dt><b>MAXLAT</b>
+
+</dt><dd>
+Only select remailers with a latency of at most
+<i>MAXLAT</i>.
+
+Default:
+<b>36h</b>.
+
+</dd><dt><b>MINLAT</b>
+
+</dt><dd>
+Only select remailers with a latency of at least
+<i>MINLAT</i>.
+
+Default:
+<b>5m</b>.
+
+</dd><dt><b>PGPPUBRING</b>
+
+</dt><dd>
+Path to your public PGP key ring. Default:
+<b>~/.pgp/pubring.pkr</b>.
+
+(Windows default: PGP registry value.)
+</dd><dt><b>PGPSECRING</b>
+
+</dt><dd>
+Path to your secret PGP key ring. Default:
+<b>~/.pgp/secring.skr</b>.
+
+(Windows default: PGP registry value.)
+</dd><dt><b>CLIENTAUTOFLUSH</b>
+
+</dt><dd>
+If 
+<b>REMAIL</b>
+
+is set to
+<b>n</b>
+
+automatically flush the pool every time Mixmaster is run. Default:
+<b>n</b>.
+
+</dd><dt><b>SENDMAIL</b>
+
+</dt><dd>
+Path to the
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?1+sendmail">sendmail</a></b>(1)
+
+program. If set to
+<b>outfile</b>,
+
+Mixmaster will create text files named
+<b>out</b><i>*</i><b>.txt</b>
+
+in the
+<b>pool</b>
+
+directory instead of sending mail.
+Default:
+<b>/usr/lib/sendmail -t</b>.
+
+</dd><dt><b>SMTPRELAY</b>
+
+</dt><dd>
+Name of SMTP relay. If set, mail will be delivered to the relay
+rather than by
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?1+sendmail">sendmail</a></b>(1).
+
+</dd><dt><b>HELONAME</b>
+
+</dt><dd>
+Host name used in the SMTP dialogue.
+Default: The
+<i>ENVFROM</i>
+
+host name or the current network name associated with the socket.
+</dd><dt><b>SMTPUSERNAME</b>
+
+</dt><dd>
+Some mail servers require authentication for sending mail. This is
+the authenticated SMTP user name.
+<b>SMTPPASSWORD</b>
+
+Password for authenticated SMTP.
+</dd><dt><b>ENVFROM</b>
+
+</dt><dd>
+Envelope from address used in the SMTP dialogue. (When the client is
+used to send non-anonymous messages,
+<i>ADDRESSS</i>
+
+is used instead.)
+Default:
+<i>ANONADDR</i>.
+
+</dd><dt><b>ALLPINGERSURL</b>
+
+</dt><dd>
+URL from which to download the 
+<i>ALLPINGERSFILE</i>.
+
+Default:
+<b><a href="http://www.noreply.org/allpingers/allpingers.txt">http://www.noreply.org/allpingers/allpingers.txt</a></b>.
+
+</dd><dt><b>WGET</b>
+
+</dt><dd>
+Define the http protocol download tool. Default:
+<b>wget</b>.
+
+</dd></dl>
+<a name="lbAI">&nbsp;</a>
+<h3>Remailer configuration:</h3>
+
+<dl compact="">
+<dt><b>NEWS</b>
+
+</dt><dd>
+Path to the news posting program, or address of a
+mail-to-news gateway. Default: no news posting.
+(When using a news posting program,
+<i>ORGANIZATION</i>
+
+contains
+an Organization line for anonymous messages. Default:
+<b>Anonymous Posting Service</b>.)
+
+</dd><dt><b>SENDANONMAIL</b>
+
+</dt><dd>
+Path to a program for sending anonymous mail. Default:
+<i>SENDMAIL</i>.
+
+<b>SENDANONMAIL</b>
+
+can be used to invoke an external mail filter for anonymized messages.
+</dd><dt><b>SHORTNAME</b>
+
+</dt><dd>
+A short name for the remailer to be used in lists. Defaults to the host name.
+</dd><dt><b>REMAILERADDR</b>
+
+</dt><dd>
+The remailer mail address.
+</dd><dt><b>ANONADDR</b>
+
+</dt><dd>
+An address to be inserted in the
+<b>From:</b>
+
+line of anonymous messages. Default:
+<i>REMAILERADDR</i>.
+
+</dd><dt><b>REMAILERNAME</b>
+
+</dt><dd>
+A name to be inserted in the
+<b>From:</b>
+
+line of remailer status
+messages. Default:
+<b>Anonymous Remailer</b>.
+
+</dd><dt><b>ANONNAME</b>
+
+</dt><dd>
+A name to be inserted in the
+<b>From:</b>
+
+line of anonymous messages.
+Default:
+<b>Anonymous</b>.
+
+</dd><dt><b>COMPLAINTS</b>
+
+</dt><dd>
+An address for complaints to be sent to. Default:
+<i>REMAILERADDR</i>.
+
+</dd><dt><b>ERRLOG</b>
+
+</dt><dd>
+Name of a file to log error messages, or
+<b>stdout</b>
+
+or
+<b>stderr</b>.
+
+Default:
+<b>stderr</b>.
+
+(When run from a tty, Mixmaster will always print a copy of error
+messages to
+<b>stderr</b>.)
+
+</dd><dt><b>MAILBOX</b>
+
+</dt><dd>
+A generic mail folder for non-remailer messages that are not stored in
+any of the following folders.
+If
+<b>MAILBOX</b>
+
+begins with a
+<b>|</b>,
+
+it specifies the path to a program. If it contains an
+<b>@</b>
+
+sign, the message is forwarded to the given address (with an
+<b>X-Loop:</b>
+
+header to prevent mail loops). If it ends with a
+<b>/</b>
+
+it is treated as a Maildir, otherwise the message is appended
+to the given file name or written to standard output if
+<b>MAILBOX</b>
+
+is
+<b>stdout</b>.
+
+Default:
+<b>mbox</b>.
+
+</dd><dt><b>MAILABUSE</b>
+
+</dt><dd>
+Mail folder for messages sent to the
+<i>COMPLAINTS</i>
+
+address.
+Default:
+<i>MAILBOX</i>.
+
+</dd><dt><b>MAILBLOCK</b>
+
+</dt><dd>
+Mail folder for messages sent to the remailer address with a
+<b>DESTINATION-BLOCK</b>
+
+line.
+Default:
+<i>MAILBOX</i>.
+
+</dd><dt><b>MAILUSAGE</b>
+
+</dt><dd>
+Mail folder for messages sent to the remailer address that do not
+contain any valid remailer commands. Default:
+<b>/dev/null</b>.
+
+</dd><dt><b>MAILANON</b>
+
+</dt><dd>
+Mail folder for replies sent to the
+<i>ANONADDR</i>
+
+address.
+Default:
+<b>/dev/null</b>.
+
+</dd><dt><b>MAILERROR</b>
+
+</dt><dd>
+Mail folder for messages that cannot be decrypted or contain other
+errors. Default:
+<b>/dev/null</b>.
+
+</dd><dt><b>MAILBOUNCE</b>
+
+</dt><dd>
+Mail folder for bounce messages. Default:
+<i>MAILBOX</i>.
+
+</dd><dt><b>MAILIN</b>
+
+</dt><dd>
+If defined an additional mail folder where Mixmaster should read messages from
+when processing its pool. If it ends with a
+<b>/</b>
+
+it is treated as a Maildir, otherwise a standard mbox format file
+is expected. All messages are removed from the folder after reading.
+<b>MAILIN</b>
+
+is not set by default.
+It is an incredibly bad idea to set this the same as <b>MAILBOX</b>.
+</dd><dt><b>VERBOSE</b>
+
+</dt><dd>
+If
+<b>VERBOSE</b>
+
+is set to
+<b>0</b>,
+
+Mixmaster will log error
+messages only. If it is set to
+<b>1</b>,
+
+error messages and warnings are logged. If
+<b>VERBOSE</b>
+
+is set to
+<b>2</b>,
+
+successful operation is logged as well.
+If set to
+<b>3</b>,
+
+a log file entry is created whenever a message
+enters or leaves the pool.  Default:
+<b>2</b>.
+
+</dd><dt><b>PASSPHRASE</b>
+
+</dt><dd>
+A passphrase used to protect the remailer secret keys from
+casual attackers. This setting overrides the compile-time
+defined
+<b>COMPILEDPASS</b>
+
+which is now deprecated.
+This should
+<i>not</i>
+
+be the same as the client passphrase.
+</dd><dt><b>EXTFLAGS</b>
+
+</dt><dd>
+Additional flags you want to set in the remailer's capabilities string.
+Defaults to the empty string, which means none.  Example:
+<b>testing</b>.
+
+</dd><dt><b>PRECEDENCE</b>
+
+</dt><dd>
+Sets the header Precedence: to this value for all outgoing mail.
+Defaults to the empty string, which means no such header is added.
+Example: 
+<b>anon</b>.
+
+If you use this you might want to block user supplied precedence
+headers in your header block file.
+</dd></dl>
+<p>
+
+The following variables can be set to
+<b>y</b>
+
+or
+<b>n</b>:
+
+</p><dl compact="">
+<dt><b>REMAIL</b>
+
+</dt><dd>
+Enable remailer functionality. Default:
+<b>n</b>.
+
+</dd><dt><b>MIDDLEMAN</b>
+
+</dt><dd>
+Act as an intermediate hop only, forward anonymized
+messages to another remailer. This mode can be used
+where complaints about anonymous messages must be
+avoided. (The variable
+<b>FORWARDTO</b>
+
+specifies the remailer
+chain to be used; default:
+<b>*</b>.)
+
+Default:
+<b>n</b>.
+
+</dd><dt><b>AUTOREPLY</b>
+
+</dt><dd>
+Send help files in response to non-remailer messages. Explicit
+<b>remailer-help</b>
+
+requests are always served.
+Default:
+<b>n</b>.
+
+</dd><dt><b>MIX</b>
+
+</dt><dd>
+Accept Mixmaster messages. Default:
+<b>y</b>.
+
+</dd><dt><b>PGP</b>
+
+</dt><dd>
+Accept OpenPGP-encrypted Cypherpunk remailer messages.
+Default:
+<b>n</b>.
+
+</dd><dt><b>UNENCRYPTED</b>
+
+</dt><dd>
+Accept unencrypted Cypherpunk remailer messages.
+Default:
+<b>n</b>.
+
+</dd><dt><b>REMIX</b>
+
+</dt><dd>
+Re-encrypt Type I messages to other remailers in the Mixmaster format
+(<b>x</b>
+
+= only when requested by user explicitly).
+Default:
+<b>y</b>.
+
+</dd><dt><b>BINFILTER</b>
+
+</dt><dd>
+Filter out binary attachments. Default:
+<b>n</b>.
+
+</dd><dt><b>LISTSUPPORTED</b>
+
+</dt><dd>
+List known remailers and their keys in remailer-conf reply. Default:
+<b>y</b>.
+
+</dd><dt><b>MID</b>
+
+</dt><dd>
+Use a hash of the message body as Message-ID, to avoid
+Usenet spam. Default:
+<b>y</b>.
+
+If
+<b>MID</b>
+
+is set to a string
+beginning with
+<b>@</b>,
+
+that string is used as the domain part of the message ID.
+</dd><dt><b>AUTOBLOCK</b>
+
+</dt><dd>
+Allow users to add their address to the
+<b>dest.blk</b>
+
+file by sending the remailer a message containing the line
+<b>destination-block</b>.
+
+Default:
+<b>y</b>.
+
+</dd><dt><b>STATSDETAILS</b>
+
+</dt><dd>
+List statistics on intermediate vs. final delivery in remailer-stats.
+Default:
+<b>y</b>.
+
+</dd></dl>
+<p>
+
+The following variables have numeric values:
+</p><dl compact="">
+<dt><b>POOLSIZE</b>
+
+</dt><dd>
+The size of the Mixmaster reordering pool. Larger sizes
+imply higher security and longer delays. Remailer default:
+<b>45</b>.
+
+Client default:
+<b>0</b>.
+
+</dd><dt><b>RATE</b>
+
+</dt><dd>
+Percentage of messages from the pool to be sent. Remailer default:
+<b>65</b>.
+
+Client default:
+<b>100</b>.
+
+Lower values cause the pool to increase in size when
+many messages are received at a time, reducing the effect
+of flooding attacks.
+</dd><dt><b>INDUMMYP</b>
+
+</dt><dd>
+Probability that Mixmaster will generate dummy messages upon
+receipt of incoming mail. Larger numbers mean more dummy
+messages on average. For instance,
+<b>10</b>
+
+means that on average one in nine incoming messages will trigger
+a dummy generation, and
+<b>20</b>
+
+means that one in four will.
+<b>0</b>
+
+means no dummy messages. Remailer default:
+<b>10</b>.
+
+Client default:
+<b>3</b>.
+
+</dd><dt><b>OUTDUMMYP</b>
+
+</dt><dd>
+Probability that Mixmaster will generate dummy messages at
+<b>SENDPOOL</b>
+
+time. If the pool is processed frequently, this should be a lower value
+than if there are long intervals between pool processing. Examples:
+<b>50</b>
+
+means on average, one dummy message will be generated per pool
+processing.
+<b>80</b>
+
+means four will be generated.
+<b>0</b>
+
+means no dummy messages. Remailer default:
+<b>90</b>.
+
+Client default:
+<b>3</b>.
+
+</dd><dt><b>SIZELIMIT</b>
+
+</dt><dd>
+Maximum size for anonymous messages in kB.
+<b>0</b>
+
+means no limit.
+Default:
+<b>0</b>.
+
+</dd><dt><b>POP3SIZELIMIT</b>
+
+</dt><dd>
+Maximum size for incoming messages in kB when using POP3.
+<b>0</b>
+
+means no limit.
+Default:
+<b>0</b>.
+
+Larger messages are deleted unread if
+<b>POP3DEL</b>
+
+is set to
+<b>y</b>,
+
+and left on the server otherwise.
+</dd><dt><b>INFLATEMAX</b>
+
+</dt><dd>
+Maximum size for
+<b>Inflate:</b>
+
+padding in kB.
+<b>0</b>
+
+means padding is not allowed.
+Default:
+<b>50</b>
+
+<b>kB</b>.
+
+</dd><dt><b>MAXRANDHOPS</b>
+
+</dt><dd>
+Maximum chain length for message forwarding requested by
+<b>Rand-Hop</b>
+
+directives.
+Default:
+<b>4</b>.
+
+</dd><dt><b>MAXRECIPIENTS</b>
+
+</dt><dd>
+limits the number of allowed recipients in outgoing mail.  Anything that exceeds this
+number is dropped silently.  Default:
+<b>5</b>.
+
+</dd><dt><b>TEMP_FAIL</b>
+
+</dt><dd>
+exit with this exit code when a timeskew problem is suspected.  Also see
+<b>TIMESKEW_BACK</b>
+
+and
+<b>TIMESKEW_FORWARD</b>.
+
+The default of
+<b>75</b>
+
+should cause your MTA to requeue the message if you are running
+mixmaster from a
+<b>.forward</b>
+
+file.
+</dd><dt><b>STATSAUTOUPDATE</b>
+
+</dt><dd>
+Set non-zero to enable Daemon stats download mode. Default: 
+<b>0</b>.
+
+</dd></dl>
+<p>
+
+The following are time variables. They can be given as years (
+<b>y</b>
+
+), months (
+<b>b</b>
+
+), days (
+<b>d</b>
+
+), hours (
+<b>h</b>
+
+), minutes (
+<b>m</b>
+
+), or seconds (
+<b>s</b>
+
+).
+</p><dl compact="">
+<dt><b>SENDPOOLTIME</b>
+
+</dt><dd>
+How often Mixmaster should check the pool for messages
+to be sent. Remailer default:
+<b>15m</b>.
+
+Client default:
+<b>0h</b>.
+
+</dd><dt><b>POP3TIME</b>
+
+</dt><dd>
+How often Mixmaster should check the POP3 accounts
+listed in
+<b>pop3.cfg</b>
+
+for new mail.
+Default:
+<b>1h</b>.
+
+</dd><dt><b>MAILINTIME</b>
+
+</dt><dd>
+How often Mixmaster should read mail from
+<b>MAILIN</b>
+
+and process mails fetched via POP3. Processing here means to
+answer remailer-xxx requests and decrypt messages to the Mixmaster
+and place them in the pool. No other processing of the pool is
+done. This action is always performed sending out messages from the pool (at
+<b>SENDPOOLTIME</b>
+
+intervals) or receiving mail via POP3 (at
+<b>POP3TIME</b>
+
+intervals). Default:
+<b>5m</b>.
+
+</dd><dt><b>PACKETEXP</b>
+
+</dt><dd>
+How long to store parts of incomplete multipart messages and other
+temporary pool files.
+Default:
+<b>7d</b>.
+
+</dd><dt><b>IDEXP</b>
+
+</dt><dd>
+Mixmaster keeps a log of packet IDs to prevent replay
+attacks.
+<b>IDEXP</b>
+
+specifies after which period of time old
+IDs are expired. Default:
+<b>7d</b>,
+
+minimum:
+<b>5d</b>.
+
+If set to
+<b>0</b>,
+
+no log is kept.
+</dd><dt><b>KEYLIFETIME</b>
+
+</dt><dd>
+Mixmaster sets an expiration date on its remailer keys 
+<b>KEYLIFETIME</b>
+
+after the key creation date. Default:
+<b>13b</b>.
+
+</dd><dt><b>KEYGRACEPERIOD</b>
+
+</dt><dd>
+Mixmaster will continue to decrypt messages encrypted to an expired key 
+for
+<b>KEYGRACEPERIOD </b>
+
+period of time after the expiration. This is done to ensure that messages
+already injected into the network are allowed to exit. Do not change this
+value unless you know what you are doing, or you will risk partitioning
+attacks. Default:
+<b>7d</b>.
+
+</dd><dt><b>KEYOVERLAPPERIOD</b>
+
+</dt><dd>
+Mixmaster will generate and advertise a new key 
+<b>KEYOVERLAPPERIOD</b>
+
+period of time before the expiration of the key. Clients should always use 
+the most recently created valid key. Clients that deviate from this 
+recommended behavior risk partitioning attacks. Default:
+<b>7d</b>.
+
+</dd><dt><b>TIMESKEW_BACK</b>
+
+</dt><dd>
+Allow going back up to
+<b>TIMESKEW_BACK</b>
+
+in time.  If the time moved further back mixmaster will assume
+there is a problem with your clock and refuse to start as a remailer.
+This is done by comparing the latest timestamp in 
+<b>time.log</b>
+
+with the current timestamp.  If set to
+<b>0</b>
+
+then this test is skipped.  If the system time is indeed correct, simply
+remove
+<b>time.log</b>.
+
+Default: 
+<b>12h</b>.
+
+</dd><dt><b>TIMESKEW_FORWARD</b>
+
+</dt><dd>
+Similar to
+<b>TIMESKEW_BACK</b>
+
+but allow jumping this far into the future.
+Default: 
+<b>2w</b>.
+
+</dd><dt><b>STATSINTERVAL</b>
+
+</dt><dd>
+Time interval between daemon downloads of stats files. Enabled by
+<b>STATSAUTOUPDATE</b>.
+
+Default: 
+<b>2h</b>.
+
+</dd></dl>
+<p>
+
+The following strings must be specified at compile-time in
+<b>config.h</b>.
+
+It is not usually necessary to modify any of these:
+</p><dl compact="">
+<dt><b>DISCLAIMER</b>
+
+</dt><dd>
+A default string to be inserted in the header of all anonymous
+messages if no
+<b>disclaim.txt</b>
+
+file is available. If
+<b>DISCLAIMER</b>
+
+contains the substring
+<b>%s</b>,
+
+it will be substituted with the
+<i>COMPLAINTS</i>
+
+address.
+</dd><dt><b>FROMDISCLAIMER</b>
+
+</dt><dd>
+A default string to be inserted at the top of the message body
+if an anonymous message contains a user-supplied
+<b>From:</b>
+
+line and no
+<b>fromdscl.txt</b>
+
+file is available.
+</dd><dt><b>MSGFOOTER</b>
+
+</dt><dd>
+A default string to be inserted at the bottom of the message body
+of all anonymous messages if no
+<b>footer.txt</b>
+
+file is available.
+</dd><dt><b>BINDISCLAIMER</b>
+
+</dt><dd>
+A string to replace the body of a binary attachment when
+the remailer is configured to filter out binaries.
+</dd><dt><b>CHARSET</b>
+
+</dt><dd>
+The character set used for MIME-encoded header lines.
+</dd><dt><b>DESTBLOCK</b>
+
+</dt><dd>
+A quoted list of files that contain blocked addresses.
+Files must be separated by one space. Mixmaster will choose
+the first file for writing if
+<b>AUTOBLOCK</b>
+
+is enabled.
+</dd></dl>
+<p>
+
+The following variables can be set in the
+<b>Makefile</b>
+
+or in
+<b>config.h</b>:
+
+</p><dl compact="">
+<dt><b>COMPILEDPASS</b>
+
+</dt><dd>
+A passphrase used to protect the remailer secret keys from
+casual attackers. You can use
+<b>`make PASS=</b><i>your passphrase</i><b>'</b>
+
+to set a passphrase. This should
+<i>not</i>
+
+be the same as the client passphrase. This option is now deprecated in
+favor of the configuration file option
+<b>PASSPHRASE</b>.
+
+</dd><dt><b>SPOOL</b>
+
+</dt><dd>
+Set
+<b>SPOOL</b>
+
+if you want to use a default directory other than
+<b>~/Mix</b>
+
+or if Mixmaster is run in an environment where
+<b>$HOME</b>
+
+is not set, e.g. when invoked via
+<b>.forward</b>.
+
+This value can be overridden by use of the environment variable
+<b>$MIXPATH</b>.
+
+</dd><dt><b>USE_SSLEAY</b>
+
+</dt><dd>
+Use the SSLeay/OpenSSL cryptographic library. Currently this is the
+only cryptographic library supported by Mixmaster.
+</dd><dt><b>USE_IDEA</b>
+
+</dt><dd>
+Use the IDEA encryption algorithm. A license is required to use IDEA
+for commercial purposes. See file
+<b>idea.txt</b>
+
+for details.
+</dd><dt><b>USE_PGP</b>
+
+</dt><dd>
+Support the OpenPGP encryption format. Mixmaster does not call any
+external encryption program.
+</dd><dt><b>USE_PCRE</b>
+
+</dt><dd>
+Use the regular expression library.
+</dd><dt><b>USE_ZLIB</b>
+
+</dt><dd>
+Use the
+<b>zlib</b>
+
+compression library.
+</dd><dt><b>USE_NCURSES</b>
+
+</dt><dd>
+Use the
+<b>ncurses</b>
+
+library.
+</dd><dt><b>USE_SOCK</b>
+
+</dt><dd>
+Use sockets to transfer mail by POP3 and SMTP.
+</dd><dt><b>USE_WINGUI</b>
+
+</dt><dd>
+Use the
+<b>Win32</b>
+
+GUI.
+</dd><dt><b>HAVE_GETDOMAINNAME</b>
+
+</dt><dd>
+The
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?2+getdomainname">getdomainname</a></b>(2)
+
+function is available.
+</dd></dl>
+<a name="lbAJ">&nbsp;</a>
+<h2>FILES</h2>
+
+These filenames can be overridden by setting the corresponding configuration
+option (given in parentheses).
+<dl compact="">
+<dt><b>mix.cfg</b>
+
+</dt><dd>
+Mixmaster configuration file.
+</dd><dt><b>pubring.asc</b>
+
+</dt><dd>
+Type 1 remailer keys (<b>PGPREMPUBASC</b>).
+</dd><dt><b>pubring.mix</b>
+
+</dt><dd>
+Type 2 remailer keys (<b>PUBRING</b>).
+</dd><dt><b>rlist.txt</b>
+
+</dt><dd>
+List of reliable type 1 remailers (<b>TYPE1LIST</b>).
+</dd><dt><b>mlist.txt</b>
+
+</dt><dd>
+List of reliable type 2 remailers (<b>TYPE2REL</b>).
+</dd><dt><b>type2.list</b>
+
+</dt><dd>
+List of known type 2 remailers (optional) (<b>TYPE2LIST</b>).
+</dd><dt><b>starex.txt</b>
+
+</dt><dd>
+List of remailers which should not be used in randomly generated
+remailer chains (<b>STAREX</b>).
+</dd></dl>
+<a name="lbAK">&nbsp;</a>
+<h3>Remailer files:</h3>
+
+<dl compact="">
+<dt><b>disclaim.txt</b>
+
+</dt><dd>
+A string to be inserted in the header of all anonymous
+messages (<b>DISCLAIMFILE</b>).
+</dd><dt><b>fromdscl.txt</b>
+
+</dt><dd>
+A string to be inserted at the top of the message body
+if an anonymous message contains a user-supplied
+<b>From:</b>
+
+line (<b>FROMDSCLFILE</b>).
+</dd><dt></dt><dt><b>footer.txt</b>
+
+</dt><dd>
+</dd><dd>
+A string to be inserted at the bottom of the message body
+of all anonymous messages (<b>MSGFOOTERFILE</b>).
+</dd><dt><b>help.txt</b>
+
+</dt><dd>
+Help file sent in response to
+<b>remailer-help</b>
+
+requests (<b>HELPFILE</b>).
+</dd><dt><b>adminkey.txt</b>
+
+</dt><dd>
+The PGP key of the remailer operator sent in response to
+<b>remailer-adminkey</b>
+
+requests (<b>ADMKEYFILE</b>).
+</dd><dt><b>abuse.txt</b>
+
+</dt><dd>
+File sent in response to mail to the
+<i>COMPLAINTS</i>
+
+address if
+<b>AUTOREPLY</b>
+
+is set (<b>ABUSEFILE</b>).
+</dd><dt><b>reply.txt</b>
+
+</dt><dd>
+Help file sent in response to replies to anonymous messages if
+<b>AUTOREPLY</b>
+
+is set (<b>REPLYFILE</b>).
+</dd><dt><b>usage.txt</b>
+
+</dt><dd>
+Help file sent in response to non-remailer message sent to
+<i>REMAILERADDR</i>
+
+if
+<b>AUTOREPLY</b>
+
+is set. If
+<b>usage.log</b>
+
+exists, recipients are logged and a reply is sent only once to avoid
+mail loops (<b>USAGEFILE</b>).
+</dd><dt><b>blocked.txt</b>
+
+</dt><dd>
+Information sent in response to automatically processed blocking requests if
+<b>AUTOREPLY</b>
+
+is set (<b>BLOCKFILE</b>).
+</dd><dt><b>pop3.cfg</b>
+
+</dt><dd>
+List of POP3 accounts with lines of the form
+<i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=account@host.domain" target="_blank">account@host.domain</a> password</i>
+
+to get remailer messages from. The lines may optionally contain the
+keyword "apop" or "pass" to select an authentication method (<b>POP3CONF</b>).
+</dd><dt><b>dest.alw</b>
+
+</dt><dd>
+List of addresses to which Mixmaster will deliver, even in middleman mode (<b>DESTALLOW</b>).
+</dd><dt><b>dest.alw.nonpublished</b>
+
+</dt><dd>
+Similar to
+<b>dest.alw</b>,
+
+with the only difference that this list is not published in remailer-conf replies (<b>DESTALLOW2</b>).
+</dd><dt><b>dest.blk</b>
+
+</dt><dd>
+List of blocked destination addresses.
+Mixmaster does not send mail to the blocked addresses listed in this file (<b>DESTBLOCK</b>).
+</dd><dt><b>rab.blk</b>
+
+</dt><dd>
+Identical to
+<b>dest.blk</b>,
+
+except Mixmaster will not write to this file.
+For use with external remailer abuse blocklists.
+</dd><dt><b>source.blk</b>
+
+</dt><dd>
+List of blocked source addresses.  If an incoming message originates
+from an address or IP in this list, it will be ignored. This
+feature can be used to avoid spam and other abusive mail (<b>SOURCEBLOCK</b>).
+</dd><dt><b>header.blk</b>
+
+</dt><dd>
+List of unwanted header fields. The file is used to delete unwanted
+header lines (e.g. lines that indicate a false identity, or Usenet
+control messages), and do other header filtering (<b>HDRFILTER</b>).
+<p>
+A destination address or header line is left out if it contains a
+search string or matches a regular expression specified in the block
+file. Lines in the block file that begin and end with a slash
+(<b>/</b><i>regexp</i><b>/</b>)
+
+are interpreted as regular expressions. Lines without
+slashes are used for case-independent substring search.
+</p><p>
+If a message contains a header line that matches a
+<b>/</b><i>regexp</i><b>/q</b>
+
+entry in
+<b>header.blk</b>,
+
+the entire message is deleted.
+</p><p>
+In addition, regular expressions can be substituted. Back-references
+are supported. For example
+</p><p>
+<br>&nbsp;/^From:&nbsp;*([^@]*)&nbsp;&lt;.*&gt;/From:&nbsp;$1/
+<br>&nbsp;/^From:.*&nbsp;\(([^@]*))/From:&nbsp;$1/
+<br>&nbsp;/^From:&nbsp;*([^@]*).*$/From:&nbsp;$1&nbsp;&lt;<i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nobody@remailer.domain" target="_blank">nobody@remailer.domain</a></i>&gt;/
+</p><p>
+would allow user-defined names in the
+<b>From:</b>
+
+line, while replacing any given address with the remailer address.
+</p></dd><dt><b>allpingers.txt</b>
+
+</dt><dd>
+Information on all known pingers (<b>ALLPINGERSFILE</b>).
+</dd></dl>
+<a name="lbAL">&nbsp;</a>
+<h3>Mixmaster uses the following files internally:</h3>
+
+<dl compact="">
+<dt><b>mixrand.bin</b>
+
+</dt><dd>
+Random seed file (<b>MIXRAND</b>).
+</dd><dt><b>secring.pgp</b>
+
+</dt><dd>
+Remailer type 1 secret keys (<b>PGPREMSECRING</b>).
+</dd><dt><b>secring.mix</b>
+
+</dt><dd>
+Remailer type 2 secret keys (<b>SECRING</b>).
+</dd><dt><b>pgpkey.txt</b>
+
+</dt><dd>
+The public type 1 remailer key (<b>PGPKEY</b>).
+</dd><dt><b>key.txt</b>
+
+</dt><dd>
+The public type 2 remailer key (<b>KEYFILE</b>).
+</dd><dt><b>id.log</b>
+
+</dt><dd>
+Log file of messages already processed (<b>IDLOG</b>).
+</dd><dt><b>stats.log</b>
+
+</dt><dd>
+Log file for remailer statistics (<b>STATS</b>).
+</dd><dt><b>stats-src.txt</b>
+
+</dt><dd>
+File for name of most recent statistics source (<b>STATSSRC</b>).
+</dd><dt><b>pgpmaxcount.log</b>
+
+</dt><dd>
+Log file for PGP Max-Count statistics (<b>PGPMAXCOUNT</b>).
+</dd><dt><b>time.log</b>
+
+</dt><dd>
+Time for periodic remailer actions (<b>REGULAR</b>).
+</dd><dt><b>dhparam.mix</b>
+
+</dt><dd>
+Public Diffie-Hellman parameters used for El-Gamal key generation (<b>DHPARAMS</b>).
+</dd><dt><b>dsaparam.mix</b>
+
+</dt><dd>
+Public DSA parameters used for DSA key generation (<b>DSAPARAMS</b>).
+</dd><dt><b>mixmaster.pid</b>
+
+</dt><dd>
+Pid file in daemon mode (<b>PIDFILE</b>).
+</dd><dt><b>pool/</b>
+
+</dt><dd>
+Message pool directory (<b>POOL</b>).
+</dd><dt><b>pool/m</b><i>*</i>
+
+</dt><dd>
+Message pool files.
+</dd><dt><b>pool/p</b><i>*</i>
+
+</dt><dd>
+Partial messages.
+</dd><dt><b>pool/l</b><i>*</i>
+
+</dt><dd>
+Latent messages.
+</dd><dt><b>pool/s</b><i>*</i>
+
+</dt><dd>
+Messages to be sent.
+</dd><dt><b>pool/t</b><i>*</i>
+
+</dt><dd>
+Temporary files.
+</dd></dl>
+<a name="lbAM">&nbsp;</a>
+<h2>ENVIRONMENT</h2>
+
+<dl compact="">
+<dt><i>MIXPATH</i>
+
+</dt><dd>
+The path to the Mixmaster directory. The default is
+<b>~/Mix</b>.
+
+</dd><dt><i>MIXPASS</i>
+
+</dt><dd>
+The passphrase used to protect your nyms and PGP keys.
+(The remailer uses a different passphrase.) If
+<i>MIXPASS</i>
+
+is not set, the client will ask for a passphrase.
+</dd></dl>
+<a name="lbAN">&nbsp;</a>
+<h2>SEE ALSO</h2>
+
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?1+mpgp">mpgp</a></b>(1),
+
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?1+pgp">pgp</a></b>(1),
+
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?1+procmail">procmail</a></b>(1),
+
+<b><a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html?8+sendmail">sendmail</a></b>(8).
+
+<a name="lbAO">&nbsp;</a>
+<h2>HISTORY</h2>
+
+Mixmaster is an implementation of a Chaumian mix-net system.
+Versions 1.0 through 2.0.3 of the 
+<b>mixmaster</b>
+
+remailer were originally written by Lance Cottrell. Mixmaster was first 
+released in 1995. Ulf Moeller collaborated on version 2.0.4, and began an 
+entire rewrite of
+<b>mixmaster</b>
+
+in 1999. This rewrite was released in 2002 as version 2.9.0, with major 
+contributions from Janis Jagars, Peter Palfrader, and Len Sassaman.
+Mixmaster 3.0 is based on the 2.9 codebase. Peter Palfrader and Len 
+Sassaman are the principal maintainers. For more information on 
+contributing authors, please see the file THANKS for details.
+<a name="lbAP">&nbsp;</a>
+<h2>COPYRIGHT</h2>
+
+(C) 1999 - 2006 Anonymizer Inc. and others.
+Mixmaster may be redistributed and modified under certain conditions.
+This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF
+ANY KIND, either express or implied. See the file COPYRIGHT for
+details.
+<p>
+
+</p><hr>
+<a name="index">&nbsp;</a><h2>Index</h2>
+<dl>
+<dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAB">NAME</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAC">SYNOPSIS</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAD">DESCRIPTION</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAE">OPTIONS</a></dt><dd>
+<dl>
+<dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAF">Remailer options:</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAG">CONFIGURATION</a></dt><dd>
+<dl>
+<dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAH">Client configuration:</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAI">Remailer configuration:</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAJ">FILES</a></dt><dd>
+<dl>
+<dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAK">Remailer files:</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAL">Mixmaster uses the following files internally:</a></dt><dd>
+</dd></dl>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAM">ENVIRONMENT</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAN">SEE ALSO</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAO">HISTORY</a></dt><dd>
+</dd><dt><a href="http://mixmaster.sourceforge.net/manpage.html#lbAP">COPYRIGHT</a></dt><dd>
+</dd></dl>
+<hr>
+This document was created by
+<a href="http://mixmaster.sourceforge.net/cgi-bin/man/man2html">man2html</a>,
+using the manual pages.<br>
+Time: 21:39:59 GMT, January 14, 2008
+
+
+</body></html>
